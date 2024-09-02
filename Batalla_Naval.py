@@ -1,11 +1,11 @@
 import os
 import random
 
-# Crea un tablero de 5x5.
+# Aqui se Crea un tablero de 5x5.
 def crear_tablero():
     return [['▩' for _ in range(5)] for _ in range(5)]
 
-# Muestra el tablero con estadísticas al lado.
+# Aqui se Muestra el tablero con estadísticas al lado.
 def mostrar_tablero_con_estadisticas(tablero, barcos_hundidos, disparos_realizados, mostrar_barcos=False):
     print("    0   1   2   3   4")
     for i, fila in enumerate(tablero):
@@ -21,7 +21,7 @@ def mostrar_tablero_con_estadisticas(tablero, barcos_hundidos, disparos_realizad
     print(f"                        Barcos Hundidos ➣ {barcos_hundidos}")
     print(f"                        Disparos Realizados ➣ {disparos_realizados}")
 
-# Coloca el barco en una posición dada.
+# Aqui se Coloca el barco en una posición dada.
 def colocar_barco(tablero, barco, posicion, direccion):
     x, y = posicion
     if direccion == 'PORTAVIONES':
@@ -42,7 +42,7 @@ def colocar_barco(tablero, barco, posicion, direccion):
             tablero[x + i][y] = 'B'
     return True
 
-# Realiza el disparo y actualiza el resultado en el tablero.
+# Aqui es una funciom para Realizar el disparo y actualiza el resultado en el tablero.
 def disparar(tablero, posicion):
     x, y = posicion
     if tablero[x][y] == 'B':
